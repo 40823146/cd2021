@@ -133,18 +133,42 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='W5~W9.html'>Next</a> >> W5~W9<br /><h1>W2~W4</h1>
-<p>兩人一組</p>
-<p>stage1-ag16</p>
-<p>題目:電風扇</p>
-<p>動機:因應季節改變</p>
-<p>W2~W3:零件繪製以及放到coppeliasim上模擬並改錯</p>
-<p>W4:報告</p>
-<p>我負責的部分是Coppeliasim的處理以及小組倉儲的更新</p>
-<p>在Coppeliasim上模擬的在Coppeliasim上模擬的電風扇</p>
-<p>影片:<a href="https://www.youtube.com/watch?v=Kjx-otNs8v0">https://www.youtube.com/watch?v=Kjx-otNs8v0</a></p>
-<p><img alt="" height="426" src="./../images/12 1n.png" width="855"/></p>
-<br />About << <a href='About.html'>Previous</a> <a href='W5~W9.html'>Next</a> >> W5~W9</div>
+    <div id="tipue_search_content">w12 << <a href='w12.html'>Previous</a> <br /><h1>w13~w14</h1>
+<p>task1</p>
+<p>參考40823131的task1</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># open file, default is read mode, since txt content no chinese char4
+# no encoding = "UTF-08" is needed
+with open("stage3_2a.txt") as fh: #打開"stage3_2a.txt檔案並命名為fh
+    # readlines will read into the whole line and put into list format 23
+    # has \n at the end of each line 13
+    #讀取 fh檔案並當作data
+    data = fh.readlines()
+    #修改錯誤的學號
+    data = [a.replace('4823122','40823122') for a in data]
+    #去除組別空白部分
+    data = [b.replace('\t\t\t\t','') for b in data]
+ 
+    #print(data)#印出data
+#print(len(data))
+for i in range(len(data)):#設i迴圈的次數為data的長度
+    #print(data)
+    group = data[i].rstrip("\n").split("\t")#設group為取data的次數i消除\n並且以\t分割數列
+ 
+    #print(group)
+    print('&lt;p&gt;'+group[0]+' ＿ &lt;a href="https://'+group[1]+'.github.io/'+group[0]+'"&gt;site&lt;/a&gt; | &lt;a href="https://github.com/'+group[1]+'/'+group[0]+'"&gt;repo&lt;/a&gt;&lt;/p&gt;')
+#印出group字串
+  
+   
+    for g in range(2,18,2):#設g迴圈的範圍從第3項開始+2到第18項
+        try:#try...except 可跳過讀取不到的資料
+            print('&lt;p&gt;'+group[g]+'＿site:'+'&lt;a href="https://'+group[g]+'.github.io/cd2021'+'"&gt;'+group[g]+'&lt;/a&gt;'+'|repo:'+'&lt;a href="https://github.com/'+group[g]+'/cd2021'+'"&gt;'+group[g]+'&lt;/a&gt;&lt;/p&gt;')
+            #印出group字串
+    
+        except:
+            continue#返回迴圈</pre>
+<p>task2</p>
+<p>這邊用stage1的</p>
+<p></p><br />w12 << <a href='w12.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">

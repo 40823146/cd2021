@@ -31,13 +31,50 @@
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/jTRXSWgXC44" width="560"></iframe></p>
 <p>這次模擬時上面未加限制導致木馬轉到一半時掉下來</p>
 <p><a href="https://youtu.be/7TRqhprKHqk">https://youtu.be/7TRqhprKHqk<iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/7TRqhprKHqk" width="560"></iframe></a></p>
-<h1>w11</h1>
-<p>這周被抽到直播教學</p>
+<h1>w11~w18</h1>
+<h2>w11</h2>
+<p>被抽到直播教學</p>
 <p>以下是ssh的設定教學以及我的紀錄檔</p>
 <p><a href="https://www.youtube.com/watch?v=gvuEAUnpd3k" rel="nofollow">https://www.youtube.com/watch?v=gvuEAUnpd3k</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/gvuEAUnpd3k" width="560"></iframe></p>
-<h1>w12</h1>
-<p>這周也被抽到直播教學</p>
+<h2>w12</h2>
+<p>w12也被抽到直播教學</p>
 <p>以下是task2的教學影片 因為使用手機網路的關係導致影片還沒儲存完全</p>
 <p><a href="https://www.youtube.com/watch?v=nXythOvdul0" rel="nofollow">https://www.youtube.com/watch?v=nXythOvdul0</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/nXythOvdul0" width="560"></iframe></p>
+<h2>w13~w14</h2>
+<p>task1</p>
+<p>參考40823131的task1</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># open file, default is read mode, since txt content no chinese char4
+# no encoding = "UTF-08" is needed
+with open("stage3_2a.txt") as fh: #打開"stage3_2a.txt檔案並命名為fh
+    # readlines will read into the whole line and put into list format 23
+    # has \n at the end of each line 13
+    #讀取 fh檔案並當作data
+    data = fh.readlines()
+    #修改錯誤的學號
+    data = [a.replace('4823122','40823122') for a in data]
+    #去除組別空白部分
+    data = [b.replace('\t\t\t\t','') for b in data]
+ 
+    #print(data)#印出data
+#print(len(data))
+for i in range(len(data)):#設i迴圈的次數為data的長度
+    #print(data)
+    group = data[i].rstrip("\n").split("\t")#設group為取data的次數i消除\n並且以\t分割數列
+ 
+    #print(group)
+    print('&lt;p&gt;'+group[0]+' ＿ &lt;a href="https://'+group[1]+'.github.io/'+group[0]+'"&gt;site&lt;/a&gt; | &lt;a href="https://github.com/'+group[1]+'/'+group[0]+'"&gt;repo&lt;/a&gt;&lt;/p&gt;')
+#印出group字串
+  
+   
+    for g in range(2,18,2):#設g迴圈的範圍從第3項開始+2到第18項
+        try:#try...except 可跳過讀取不到的資料
+            print('&lt;p&gt;'+group[g]+'＿site:'+'&lt;a href="https://'+group[g]+'.github.io/cd2021'+'"&gt;'+group[g]+'&lt;/a&gt;'+'|repo:'+'&lt;a href="https://github.com/'+group[g]+'/cd2021'+'"&gt;'+group[g]+'&lt;/a&gt;&lt;/p&gt;')
+            #印出group字串
+    
+        except:
+            continue#返回迴圈</pre>
+<p>task2</p>
+<p>這邊用stage1的</p>
+<p></p>
