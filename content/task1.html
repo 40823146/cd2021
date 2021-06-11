@@ -87,6 +87,7 @@ img.add_border {
 </head>
 <body>
 <div class='container'><nav>
+        
     <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -132,4 +133,86 @@ img.add_border {
           </div>
           
         </header>
-    </nav><section><h1>Site Map</h1><div id="tipue_search_content"></div><ul><li><a href='About.html'>About</a><li><a href='W2~W4.html'>W2~W4</a><li><a href='W5~W9.html'>W5~W9</a><li><a href='w11~w18.html'>w11~w18</a><ul><li><a href='w11.html'>w11</a><li><a href='w12.html'>w12</a><li><a href='w13~w14.html'>w13~w14</a><ul><li><a href='task1.html'>task1</a><li><a href='task2.html'>task2</a><li><a href='robodk.html'>robodk</a></li></ul></section></div></body></html>
+    <div id="tipue_search_content">w13~w14 << <a href='w13~w14.html'>Previous</a> <a href='task2.html'>Next</a> >> task2<br /><h1>task1</h1>
+<p>參考40823131的task1</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># open file, default is read mode, since txt content no chinese char4
+# no encoding = "UTF-08" is needed
+with open("stage3_2a.txt") as fh: #打開"stage3_2a.txt檔案並命名為fh
+    # readlines will read into the whole line and put into list format 23
+    # has \n at the end of each line 13
+    #讀取 fh檔案並當作data
+    data = fh.readlines()
+    #修改錯誤的學號
+    data = [a.replace('4823122','40823122') for a in data]
+    #去除組別空白部分
+    data = [b.replace('\t\t\t\t','') for b in data]
+ 
+    #print(data)#印出data
+#print(len(data))
+for i in range(len(data)):#設i迴圈的次數為data的長度
+    #print(data)
+    group = data[i].rstrip("\n").split("\t")#設group為取data的次數i消除\n並且以\t分割數列
+ 
+    #print(group)
+    print('&lt;p&gt;'+group[0]+' ＿ &lt;a href="https://'+group[1]+'.github.io/'+group[0]+'"&gt;site&lt;/a&gt; | &lt;a href="https://github.com/'+group[1]+'/'+group[0]+'"&gt;repo&lt;/a&gt;&lt;/p&gt;')
+#印出group字串
+  
+   
+    for g in range(2,18,2):#設g迴圈的範圍從第3項開始+2到第18項
+        try:#try...except 可跳過讀取不到的資料
+            print('&lt;p&gt;'+group[g]+'＿site:'+'&lt;a href="https://'+group[g]+'.github.io/cd2021'+'"&gt;'+group[g]+'&lt;/a&gt;'+'|repo:'+'&lt;a href="https://github.com/'+group[g]+'/cd2021'+'"&gt;'+group[g]+'&lt;/a&gt;&lt;/p&gt;')
+            #印出group字串
+    
+        except:
+            continue#返回迴圈</pre>
+<br />w13~w14 << <a href='w13~w14.html'>Previous</a> <a href='task2.html'>Next</a> >> task2</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

@@ -1,109 +1,139 @@
-<h1>About</h1>
-<p>40823146蕭宏翔</p>
-<p>倉儲:<a href="https://github.com/40823146/cd2021">https://github.com/40823146/cd2021</a></p>
-<p>網頁:<a href="https://40823146.github.io/cd2021/content/index.html">https://40823146.github.io/cd2021/content/index.html</a></p>
-<p></p>
-<h1>W2~W4</h1>
-<p>兩人一組</p>
-<p>stage1-ag16</p>
-<p>題目:電風扇</p>
-<p>動機:因應季節改變</p>
-<p>W2~W3:零件繪製以及放到coppeliasim上模擬並改錯</p>
-<p>W4:報告</p>
-<p>我負責的部分是Coppeliasim的處理以及小組倉儲的更新</p>
-<p>在Coppeliasim上模擬的在Coppeliasim上模擬的電風扇</p>
-<p>影片:<a href="https://www.youtube.com/watch?v=Kjx-otNs8v0">https://www.youtube.com/watch?v=Kjx-otNs8v0</a></p>
-<p><img alt="" height="426" src="/images/12 1n.png" width="855"/></p>
-<h1>W5~W9</h1>
-<p>四人一組</p>
-<p>stage2-ag9</p>
-<p>題目:旋轉木馬音樂盒</p>
-<p>w5:討論</p>
-<p>w6~8:零件繪製以及coppeliasim模擬</p>
-<p>w9:報告</p>
-<p>我負責coppeliasim的模擬以及下半部的齒輪組裝及繪製</p>
-<p>在solidwork上利用以下關係式所繪製出的</p>
-<p><img alt="" height="414" src="/images/math.jpg" width="325"/></p>
-<p><img alt="" height="445" src="/images/齒輪箱.jpg" width="818"/></p>
-<p>在coppeliasim上的模擬</p>
-<p><img alt="" height="454" src="/images/cop.jpg" width="804"/></p>
-<p><a href="https://www.youtube.com/watch?v=jTRXSWgXC44">https://www.youtube.com/watch?v=jTRXSWgXC44</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/jTRXSWgXC44" width="560"></iframe></p>
-<p>這次模擬時上面未加限制導致木馬轉到一半時掉下來</p>
-<p><a href="https://youtu.be/7TRqhprKHqk">https://youtu.be/7TRqhprKHqk<iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/7TRqhprKHqk" width="560"></iframe></a></p>
-<h1>w11~w18</h1>
-<h2>w11</h2>
-<p>被抽到直播教學</p>
-<p>以下是ssh的設定教學以及我的紀錄檔</p>
-<p><a href="https://www.youtube.com/watch?v=gvuEAUnpd3k" rel="nofollow">https://www.youtube.com/watch?v=gvuEAUnpd3k</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/gvuEAUnpd3k" width="560"></iframe></p>
-<h2>w12</h2>
-<p>w12也被抽到直播教學</p>
-<p>以下是task2的教學影片 因為使用手機網路的關係導致影片還沒儲存完全</p>
-<p><a href="https://www.youtube.com/watch?v=nXythOvdul0" rel="nofollow">https://www.youtube.com/watch?v=nXythOvdul0</a></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/nXythOvdul0" width="560"></iframe></p>
-<h2>w13~w14</h2>
-<p>task1</p>
-<p>參考40823131的task1</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># open file, default is read mode, since txt content no chinese char4
-# no encoding = "UTF-08" is needed
-with open("stage3_2a.txt") as fh: #打開"stage3_2a.txt檔案並命名為fh
-    # readlines will read into the whole line and put into list format 23
-    # has \n at the end of each line 13
-    #讀取 fh檔案並當作data
-    data = fh.readlines()
-    #修改錯誤的學號
-    data = [a.replace('4823122','40823122') for a in data]
-    #去除組別空白部分
-    data = [b.replace('\t\t\t\t','') for b in data]
- 
-    #print(data)#印出data
-#print(len(data))
-for i in range(len(data)):#設i迴圈的次數為data的長度
-    #print(data)
-    group = data[i].rstrip("\n").split("\t")#設group為取data的次數i消除\n並且以\t分割數列
- 
-    #print(group)
-    print('&lt;p&gt;'+group[0]+' ＿ &lt;a href="https://'+group[1]+'.github.io/'+group[0]+'"&gt;site&lt;/a&gt; | &lt;a href="https://github.com/'+group[1]+'/'+group[0]+'"&gt;repo&lt;/a&gt;&lt;/p&gt;')
-#印出group字串
-  
-   
-    for g in range(2,18,2):#設g迴圈的範圍從第3項開始+2到第18項
-        try:#try...except 可跳過讀取不到的資料
-            print('&lt;p&gt;'+group[g]+'＿site:'+'&lt;a href="https://'+group[g]+'.github.io/cd2021'+'"&gt;'+group[g]+'&lt;/a&gt;'+'|repo:'+'&lt;a href="https://github.com/'+group[g]+'/cd2021'+'"&gt;'+group[g]+'&lt;/a&gt;&lt;/p&gt;')
-            #印出group字串
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
     
-        except:
-            continue#返回迴圈</pre>
-<p>task2</p>
-<p>這邊用stage1的題目</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/qgWIu7iAfTs" width="560"></iframe></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sim as vrep
-import sys
-# child threaded script: 
-#simExtRemoteApiStart(19999)
- 
-vrep.simxFinish(-1)
- 
-clientID = vrep.simxStart('127.0.0.1', 19999, True, True, 5000, 5)
- 
-if clientID!= -1:
-    print("Connected to remote server")
-else:
-    print('Connection not successful')
-    sys.exit('Could not connect')
- 
-errorCode,main_handle=vrep.simxGetObjectHandle(clientID,'main',vrep.simx_opmode_oneshot_wait)
- 
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
- 
-if errorCode == -1:
-    print('Can not find main_handle')
-    sys.exit()
- 
-errorCode=vrep.simxSetJointTargetVelocity(clientID,main_handle,20, vrep.simx_opmode_oneshot_wait)
-</pre>
-<p>robodk</p>
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40823146 cd2021</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40823146 cd2021</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li><a href='W2~W4.html'>W2~W4</a><li><a href='W5~W9.html'>W5~W9</a><li class='has-children'><a href='w11~w18.html'>w11~w18</a><ul class='dropdown'><li><a href='w11.html'>w11</a><li><a href='w12.html'>w12</a><li class='has-children'><a href='w13~w14.html'>w13~w14</a><ul class='dropdown'><li><a href='task1.html'>task1</a><li><a href='task2.html'>task2</a><li><a href='robodk.html'>robodk</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">task2 << <a href='task2.html'>Previous</a> <br /><h1>robodk</h1>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/9n9a6cyIbJc" width="560"></iframe></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># KMOLab Portable RoboDK pick and place
 from robolink import *    # API to communicate with robodk
@@ -392,4 +422,54 @@ while idTake &gt;= 0:
  
 # Move home when the robot finishes
 robot.MoveJ([0,0,0,0,10,-200])</pre>
-<p></p>
+<p></p><br />task2 << <a href='task2.html'>Previous</a> </div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
